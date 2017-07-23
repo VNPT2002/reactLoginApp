@@ -8,13 +8,12 @@ export default class App extends Component{
             _user: "",
             _pwd : "",
             _result : "chưa login",
-            _tonken : "..."
+            _token : "..."
         }
     }
 
-    Login(){
-        /*
-        fetch("http://192.168.1.6:82/demo/tasksh.nsf/api.xsp/readData",{
+    Login(){        
+        fetch("http://192.168.1.6:82/demo/tasksh.nsf/api.xsp/Login",{
             method:"POST",
             headers:{
                 "Accept":"application/json",
@@ -27,12 +26,12 @@ export default class App extends Component{
         })
         .then((response)=>response.json())
         .then((responseJson)=>{
-            console.log(responseJson);
+            console.log(responseJson);             
             this.setState({
-                kq:responseJson["_token"]
+                _result: responseJson["token"]
             });
         })
-        */
+        
     }
     render(){
     return(
